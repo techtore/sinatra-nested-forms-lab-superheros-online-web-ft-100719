@@ -1,15 +1,19 @@
 class Hero 
   attr_reader :name, :power, :biography
-  HEROES = []
+  @@all = []
   
   def initialize(params)
     @name = params[name]
     @power = params[power]
     @biography = params[biography]
-    HEROES << self
+    @@all << self
   end
   
-  def self.all 
-    HEROES
+  def save
+    self.class.all << self
+  end
+
+   def self.all
+    @@all
   end
 end
