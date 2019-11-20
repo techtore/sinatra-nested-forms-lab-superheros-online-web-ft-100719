@@ -13,9 +13,9 @@ class App < Sinatra::Base
       params[:team][:heroes].each do |details|
         Heroes.new(details)
       end
-      @ships = Ship.all
+      @heroes = Hero.all
       
-      erb :'pirates/show'
+      erb :'views/teams'
   end
 
 end
