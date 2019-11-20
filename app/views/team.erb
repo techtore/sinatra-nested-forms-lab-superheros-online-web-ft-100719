@@ -13,7 +13,16 @@
 
 <h2>Hero 2</h2>
 <% @heroes.each.with_index do |hero, index| %>
-  <% if index == 0 %>
+  <% if index == 1 %>
+    <h4>Hero's Name: <%= hero.name%></h4>
+    <h4>Hero's Power: <%= hero.power%></h4>
+    <h4>Hero's Biography: <%= hero.biography%></h4>
+  <%end%>
+<%end%>
+
+<h2>Hero 3</h2>
+<% @heroes.each.with_index do |hero, index| %>
+  <% if index == 2 %>
     <h4>Hero's Name: <%= hero.name%></h4>
     <h4>Hero's Power: <%= hero.power%></h4>
     <h4>Hero's Biography: <%= hero.biography%></h4>
